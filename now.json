@@ -3,8 +3,11 @@
 	"name": "azuresky19",
 	"builds": [
 		{ "src": "static/**", "use": "@now/static" }
+		{ "src": "bujo-deck/deck.mdx", "use": "@now/mdx-deck" }
 	],
 	"routes": [
+		{ "src": "/bujo-deck", "dest": "/bujo-deck/index.html" }
+		{ "src": "/bujo-deck/(.*)", "dest": "/bujo-deck/$1" }
 		{ "src": "/(.*)", "dest": "/static/$1" }
 	]
 }
