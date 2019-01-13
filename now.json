@@ -6,7 +6,7 @@
 		{ "src": "bujo-deck/deck.mdx", "use": "@now/mdx-deck" }
 	],
 	"routes": [
-		{ "src": "/bujo-deck", "dest": "/bujo-deck/index.html" },
+		{ "src": "/bujo-deck", "status": 307, "headers": {"Location": "/bujo-deck/"}},
 		{ "src": "/bujo-deck/(.*)", "dest": "/bujo-deck/$1" },
 		{ "src": "/(.*)", "dest": "/static/$1" }
 	]
